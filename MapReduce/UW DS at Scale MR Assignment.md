@@ -214,8 +214,8 @@ The output from the reduce function will also be a row of the result matrix repr
 You can test your solution to this problem using [matrix.json](https://github.com/justinjiajia/datasci_course_materials/blob/master/assignment3/data/matrix.json):
 
 ```bash
-$ python multiply.py [matrix.json](https://github.com/justinjiajia/datasci_course_materials/blob/master/assignment3/solutions/multiply.json)
+$ python multiply.py matrix.json
 ```
 
 
-You can verify your solution by comparing your result with the file multiply.json.
+You can verify your solution by comparing your result with the file [multiply.json](https://github.com/justinjiajia/datasci_course_materials/blob/master/assignment3/solutions/multiply.json).
