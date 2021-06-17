@@ -102,7 +102,7 @@ $ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 > -D stream.num.map.output.key.fields=2 \
 > -D mapreduce.partition.keypartitioner.options=-k1,1 \
 > -D mapreduce.job.output.key.comparator.class=org.apache.hadoop.mapreduce.lib.partition.KeyFieldBasedComparator \
-> -D mapreduce.partition.keycomparator.options='-k1,1 -k2,2nr' \      # "-k1,1 -k2,2nr" still works
+> -D mapreduce.partition.keycomparator.options='-k1,1 -k2,2nr' \      # double-quoted string "-k1,1 -k2,2nr" still works
 > -input input_dir_on_HDFS \
 > -output output_dir_on_HDFS \
 > -mapper mapper.py \
