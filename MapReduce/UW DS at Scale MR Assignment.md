@@ -4,7 +4,7 @@ The MapReduce programming model (and a corresponding system) was proposed in a 2
 
 As always, the first thing to do is to update your provided course materials using git pull. These resources may have changed since the last time you interacted with the [datasci_course_materials repository](https://github.com/uwescience/datasci_course_materials). (Review the github instructions in the course materials if necessary).
 
-dd
+
 Next, review the lectures to make sure you understand the programming model.
 
 
@@ -58,7 +58,7 @@ In Part 4, the code loads the json file and executes the MapReduce query which p
 ## Submission Details
 
 
-For each problem, you will turn in a python script, similar to wordcount.py, that solves the problem using the supplied MapReduce framework.
+For each problem, you will turn in a python script, similar to [wordcount.py](https://github.com/justinjiajia/datasci_course_materials/blob/master/assignment3/wordcount.py), that solves the problem using the supplied MapReduce framework.
 
 When testing, make sure MapReduce.py is in the same directory as the solution script.
 
