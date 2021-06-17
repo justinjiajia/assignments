@@ -1,3 +1,5 @@
+# Programming Assignment: Thinking in MapReduce
+
 In this assignment, you will be designing and implementing MapReduce algorithms for a variety of common data processing tasks.
 
 The MapReduce programming model (and a corresponding system) was proposed in a 2004 paper from a team at Google as a simpler abstraction for processing very large datasets in parallel. The goal of this assignment is to give you experience “thinking in MapReduce.” We will be using small datasets that you can inspect directly to determine the correctness of your results and to internalize how MapReduce works. In the next assignment, you will have the opportunity to use a MapReduce-based system to process the very large datasets for which it was designed.
