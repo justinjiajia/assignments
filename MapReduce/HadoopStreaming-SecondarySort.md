@@ -1,7 +1,7 @@
 
 
 ```bash
-wget -O flights.csv https://raw.githubusercontent.com/justinjiajia/datafiles/main/flights.csv
+$ wget -O flights.csv https://raw.githubusercontent.com/justinjiajia/datafiles/main/flights.csv
 ```
 
 ## preprocess data
