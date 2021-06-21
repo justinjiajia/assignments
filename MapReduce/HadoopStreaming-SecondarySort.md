@@ -2,6 +2,7 @@
 
 ```bash
 $ wget -O flights.csv https://raw.githubusercontent.com/justinjiajia/datafiles/main/flights.csv
+$ head -n30 flights.csv
 ```
 
 ## preprocess data
@@ -104,13 +105,10 @@ $ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 > -D mapreduce.partition.keypartitioner.options=-k1,1 \
 > -D mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator  \
 > -D mapred.text.key.comparator.options='-k1,1 -k2,2nr' \     # double-quoted string "-k1,1 -k2,2nr" also works
+> -files ~/mapper.py,~/reducer.py \
 > -input input_dir_on_HDFS \
 > -output output_dir_on_HDFS \
 > -mapper mapper.py \
 > -reducer reducer.py \
 > -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner \
-> -file ~/mapper.py \
-> -file ~/reducer.py
-
 ```
- [`org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner`](https://hadoop.apache.org/docs/current/api/org/apache/hadoop/mapred/lib/KeyFieldBasedPartitioner.html),
