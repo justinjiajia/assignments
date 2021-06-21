@@ -98,11 +98,12 @@ $ cat inbounds.txt | ~/mapper.py | sort -t, -k1,1 -k2,2nr | ~/reducer.py
 ```bash
 $ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 > -D mapreduce.job.reduces=2 \
-> -D mapreduce.map.output.key.field.separator=, \
+> -D stream.map.output.field.separator=, \
 > -D stream.num.map.output.key.fields=2 \
+> -D map.output.key.field.separator=, \
 > -D mapreduce.partition.keypartitioner.options=-k1,1 \
-> -D mapreduce.job.output.key.comparator.class=org.apache.hadoop.mapreduce.lib.partition.KeyFieldBasedComparator \
-> -D mapreduce.partition.keycomparator.options='-k1,1 -k2,2nr' \     # double-quoted string "-k1,1 -k2,2nr" also works
+> -D mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator  \
+> -D mapred.text.key.comparator.options='-k1,1 -k2,2nr' \     # double-quoted string "-k1,1 -k2,2nr" also works
 > -input input_dir_on_HDFS \
 > -output output_dir_on_HDFS \
 > -mapper mapper.py \
@@ -112,3 +113,4 @@ $ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 > -file ~/reducer.py
 
 ```
+ [`org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner`](https://hadoop.apache.org/docs/current/api/org/apache/hadoop/mapred/lib/KeyFieldBasedPartitioner.html),
