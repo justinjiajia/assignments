@@ -53,7 +53,7 @@ Again, the design of your program should be scalable enough to handle all three 
 
 - a) Get the TOP 10 (=K) most similar people of EVERY user in the medium-sized dataset in Ref[7].
 
-- b) Get the TOP 10 (=K) most similar people of EVERY user in the large dataset in Ref [8]. (Hints: use composite key and secondary sort as in Ref [9] and [10])
+- b) Get the TOP 10 (=K) most similar people of EVERY user in the large dataset in Ref [8]. (Hints: use [composite key](http://tutorials.techmytalk.com/2014/11/14/mapreduce-composite-key-operation-part2/) and [secondary sort](http://codingjunkie.net/secondary-sort/))
 
 
 Warning: Please closely monitor the resource consumption, including memory and hard disk. The Amazon free tier may not provide enough hard disk. You need to apply for extra storage or use other platforms.
@@ -73,3 +73,15 @@ Hints:
 1. Submit the MapReduce code
 
 2. As for a) and b), submit the community detection results of all those users whose IDs share the same last 5 digits with your DGUT student ID. For example, if your student ID is 115500054321, then you need to submit the community members for users with ID = 54321, 154321, 254321, 354321, ..., 1154321, ...
+
+
+
+## References
+
+
+[6] Small scale dataset
+https://www.dropbox.com/s/ntzk80l5iiiuh50/Small%20Dataset.txt?dl=0
+[7] Medium scale dataset
+https://www.dropbox.com/s/6sxnnadhxbyk7ho/Medium%20Dataset.txt?dl=0
+[8] Large scale dataset
+https://www.dropbox.com/s/lrlgz50m88j6fpc/Large%20Dataset.txt?dl=0
